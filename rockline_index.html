@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rockline Echo</title>
+  
+  <!-- Makes the page responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="rockline_style.css">
+</head>
+<body>
+
+  <!-- Huge faded background text for branding -->
+  <div class="rockline-bg">ROCKLINE</div>
+
+  <!-- Main container for the app UI -->
+  <div class="app-container">
+
+    <!-- App Title -->
+    <h1>🎸 Rockline Echo</h1>
+
+    <!-- Paragraph to display what the user says -->
+    <p id="result">Your speech will appear here...</p>
+
+    <!-- Dropdown to select mood -->
+    <label for="mood">Mood</label>
+    <select id="mood">
+      <option value="normal">Normal</option>
+      <option value="funny">Funny</option>
+      <option value="sad">Sad</option>
+      <option value="robot">Robot</option>
+      <option value="excited">Excited</option>
+    </select>
+
+    <!-- Slider to control pitch of the voice -->
+    <label for="pitch">Pitch</label>
+    <input type="range" id="pitch" min="0.5" max="2" step="0.1" value="1">
+
+    <!-- Buttons for user actions -->
+    <button id="listenBtn">🎤 Listen</button>
+    <button id="repeatBtn">🔊 Speak</button>
+    <button id="stopBtn">⛔ Stop</button>
+
+  </div>
+
+  <!-- Link to external JS file -->
+  <script src="rockline_script.js"></script>
+</body>
+</html>

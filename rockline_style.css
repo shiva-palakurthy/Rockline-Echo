@@ -1,0 +1,93 @@
+/* ============================
+   Body & Background
+   Dark cinematic gradient background
+============================ */
+body {
+  margin: 0; /* Remove default margin */
+  height: 100vh; /* Full viewport height */
+  background: radial-gradient(circle at top, #111, #000); /* Dark gradient */
+  font-family: 'Segoe UI', sans-serif; /* Clean font */
+  overflow: hidden; /* Hide scrollbars */
+}
+
+/* Large faded background text */
+.rockline-bg {
+  position: fixed; /* Fixed behind everything */
+  top: 50%; left: 50%; /* Center of screen */
+  transform: translate(-50%, -50%) rotate(-20deg); /* Center & rotate for style */
+  font-size: 120px; /* Huge text */
+  font-weight: 900;
+  letter-spacing: 15px; /* Space between letters */
+  color: rgba(255,255,255,0.04); /* Faded white */
+  z-index: 1; /* Behind app container */
+}
+
+/* Main app card */
+.app-container {
+  position: relative; /* Stacks above background */
+  z-index: 5; /* Ensure on top */
+  width: 90%; /* Responsive width */
+  max-width: 420px; /* Limit max width on desktop */
+  margin: auto;
+  margin-top: 8vh; /* Top spacing */
+  padding: 30px;
+  background: rgba(0,0,0,0.65); /* Translucent dark card */
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 40px rgba(255,87,34,0.4); /* Subtle glow */
+}
+
+/* App title */
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Paragraph for displaying user speech */
+#result {
+  min-height: 40px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Mood dropdown & pitch slider styles */
+select, input[type=range] {
+  width: 100%; /* Full width of container */
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Buttons styling */
+button {
+  width: 100%; /* Full width on mobile */
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#ff5722,#ff9800); /* Gradient buttons */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover { transform: scale(1.04); }
+
+/* Speaking text animation */
+.speaking {
+  animation: fireGlow 1s infinite;
+}
+
+@keyframes fireGlow {
+  50% { color: #ff9800; } /* Text glows orange while speaking */
+}
+
+/* Desktop adjustments */
+@media (min-width: 600px) {
+  .app-container button {
+    width: 30%; /* Buttons smaller & horizontal on desktop */
+    margin: 5px;
+  }
+}
